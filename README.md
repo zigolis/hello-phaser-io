@@ -8,6 +8,7 @@ These are the basic requirements for your application:
 
 * ```node``` v0.10+
 * ```npm```  v1.4+
+* ```bower```  v1.3.11+
 
 ## Installation
 
@@ -16,6 +17,10 @@ First of all, clone this repository:
 	git clone git@github.com:zigolis/hello-phaser-io.git
 
 After that, enter the folder ```$ cd hello-phaser-io``` and execute this line in your directory:
+
+    npm install
+
+And then execute:
 
     bower install
 
