@@ -13,13 +13,9 @@ These are the basic requirements for your application:
 
 First of all, clone this repository:
 
-	git clone git@github.com:zigolis/ola-phaser-dev-games-js.git
+	git clone git@github.com:zigolis/hello-phaser-io.git
 
-After that, enter the folder ```$ cd ola-phaser-dev-games-js``` and execute this line in your directory:
-
-    npm install
-
-And then execute:
+After that, enter the folder ```$ cd hello-phaser-io``` and execute this line in your directory:
 
     bower install
 
@@ -28,5 +24,5 @@ And then execute:
 Execute this line to run your game:
 
     //To do
-    
-Your game should be running on ```http://0.0.0.0:3000/html/```
+
+Your game should be running on ```http://0.0.0.0:3000/```
