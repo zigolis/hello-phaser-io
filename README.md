@@ -18,16 +18,18 @@ First of all, clone this repository:
 
 After that, enter the folder ```$ cd hello-phaser-io``` and execute this line in your directory:
 
-    npm install
+    bower install
 
 And then execute:
 
-    bower install
+    sudo npm install http-server -g
+    
+You will have to inform your password
 
 ## Running
 
 Execute this line to run your game:
 
-    //To do
+    http-server
 
-Your game should be running on ```http://0.0.0.0:3000/```
+Your game should be running on ```http://0.0.0.0:8080/```
