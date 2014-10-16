@@ -33,3 +33,6 @@ Execute this line to run your game:
     http-server
 
 Your game should be running on ```http://0.0.0.0:8080/```
+
+## Live example
+[Hello phaser.io](http://zigolis.github.io/hello-phaser-io/)
