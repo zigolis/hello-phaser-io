@@ -12,21 +12,26 @@ var GameView = {
     create: function() {
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
+        // Create a pipe group
         this.pipes = game.add.group();
         this.pipes.enableBody = true;
         this.pipes.createMultiple(20, 'pipe');
+
+        // Call addRowOfPipes each 1500ms
         this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
 
+        // Add lizBird to stage
         this.lizBird = this.game.add.sprite(100, 245, 'lizBird');
+
+        // Enable / set physics system to lizBird
         game.physics.arcade.enable(this.lizBird);
-        this.lizBird.body.gravity.y = 1000;
+
+        this.lizBird.body.gravity.y = 1200;
 
         // Set a central anchor
         this.lizBird.anchor.setTo(-0.2, 0.5);
 
-        // var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        var spaceKey = this.game.input.onDown.add(this.jump, this);
-        // spaceKey.onDown.add(this.jump, this);
+        this.controls();
 
         // Add score to game
         this.score = 0;
@@ -36,13 +41,21 @@ var GameView = {
         this.jumpSound = game.add.audio('jump');
     },
 
+    controls: function() {
+        // Define game controls
+        var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        spaceKey.onDown.add(this.jump, this);
+        this.game.input.onDown.add(this.jump, this);
+    },
+
     update: function() {
         // If lizBird go out the world
         if (this.lizBird.inWorld == false) {
+            this.shutdown();
             this.restartGame();
         }
 
-        // Detect colision
+        // Detect collision
         game.physics.arcade.overlap(this.lizBird, this.pipes, this.hitPipe, null, this);
 
         // Rotate lizBird
@@ -58,11 +71,11 @@ var GameView = {
         }
 
         // Set velocity
-        this.lizBird.body.velocity.y = -350;
+        this.lizBird.body.velocity.y = -400;
 
         // Create a lizBird animation
         var animation = game.add.tween(this.lizBird);
-        animation.to({angle: -20}, 100);
+        animation.to({angle: -40}, 100);
         animation.start();
 
         // Play sound
@@ -94,7 +107,7 @@ var GameView = {
         var pipe = this.pipes.getFirstDead();
 
         pipe.reset(x, y);
-        pipe.body.velocity.x = -250;
+        pipe.body.velocity.x = -220;
         pipe.checkWorldBounds = true;
         pipe.outOfBoundsKill = true;
     },
@@ -111,7 +124,14 @@ var GameView = {
         // Increase a point
         this.score += 1;
         this.labelScore.text = this.score;
-    }
+    },
+
+    shutdown: function() {
+        // flush / destroy elements
+        this.game.input.keyboard.removeKey(Phaser.Keyboard.SPACEBAR);
+        this.lizBird.destroy();
+        this.pipes.destroy();
+    },
 };
 
 game.state.add('main', GameView);
