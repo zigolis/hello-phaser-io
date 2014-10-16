@@ -24,8 +24,9 @@ var GameView = {
         // Set a central anchor
         this.lizBird.anchor.setTo(-0.2, 0.5);
 
-        var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceKey.onDown.add(this.jump, this);
+        // var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        var spaceKey = this.game.input.onDown.add(this.jump, this);
+        // spaceKey.onDown.add(this.jump, this);
 
         // Add score to game
         this.score = 0;
