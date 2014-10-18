@@ -563,7 +563,7 @@ URL: https://code.google.com/p/io-2012-slides
         <pre class="prettyprint" data-lang="javascript">
       var GameView = {
           addRowOfPipes: function() {
-              // Pega onde a passagem estará
+              // Define onde a passagem estará
               var hole = Math.floor(Math.random() * 5) + 1;
 
               for (var i = 0; i < 8; i++) {
@@ -571,10 +571,6 @@ URL: https://code.google.com/p/io-2012-slides
                       this.addOnePipe(400, i * 60 + 10);
                   }
               }
-
-              // Increase a point
-              this.score += 1;
-              this.labelScore.text = this.score;
           }
       }
         </pre>
