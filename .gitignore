@@ -1,5 +1,6 @@
 .DS_Store
 
+slides/.sass-cache/
 assets/vendor/
 node_modules
 npm-debug.log
