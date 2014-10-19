@@ -1,0 +1,701 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello phaser.io</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> -->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <!--This one seems to work all the time, but really small on ipad-->
+        <!-- <meta name="viewport" content="initial-scale=0.4"> -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" media="all" href="theme/css/default.css">
+        <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+        <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+        <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+    </head>
+
+    <body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide nobackground phaser" style="text-align:center">
+    <hgroup class="auto-fadein" style="margin-top:200px">
+      <h1 data-config-title style="padding-top:170px;text-align:right"><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle class="small" style="margin-top:0;text-align:right !important;"><!-- populated from slide_config.json --></h2>
+    </hgroup>
+
+      <p data-config-presenter class="zig" style="margin-top:50px;text-align:right"><!-- populated from slide_config.json --></p>
+  </slide>
+
+  <slide>
+    <aside class="gdbar zigbar">
+        <span class="blogmv">@zigolis</span>
+    </aside>
+
+    <article class="flexbox hcenter" style="margin-top:100px;">
+       <img src="images/mosaic_logo_full.png" width="90%">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Agenda</h2>
+    </hgroup>
+
+    <article>
+      <ul class="my-style">
+        <li>Big deal</li>
+        <li>HTML5</li>
+        <li>Javascript</li>
+        <li>Just Vanilla Games</li>
+        <li>Phaser.io</li>
+        <li>LizBird for dummies</li>
+        <li>Show me the code bitch!!!</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide style="background:#FED07D;">
+    <hgroup>
+      <h2 class="small"><span style="text-decoration: line-through;margin-bottom:25px;display:block">Desenvolver um game</span> Zoar o coleguinha</h2>
+    </hgroup>
+
+    <article class="flexbox vcenter hcenter" style="margin-top:0">
+       <a href="http://0.0.0.0:8080/" target="_blank"><img src="images/lizBird.png" style="border:3px solid #fff;" width="75%"></a>
+     </article>
+  </slide>
+
+    <slide class="title-slide nobackground">
+      <article class="flexbox vcenter hcenter">
+         <span><img src="images/html_logo.png" width=""></span>
+       </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2>HTML5</h2>
+      </hgroup>
+
+        <article class="hcenter"><br><br><br><br>
+            <p>É a nova especificação do HTML que define um conjunto de regras
+            de marcação para escrita do HTML e xHTML além de definir as APIs (DOM)
+            que podem ser utilizadas para manipulação dos elementos.</p>
+        </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2>HTML5 Rocks</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+         <img src="images/html5rocks.png" width="75%">
+       </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2>W3C</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+         <img src="images/html5w3c.png" width="75%">
+       </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Javascript</h2>
+    </hgroup>
+
+    <article class="hcenter"><br><br><br><br>
+        <p>É uma linguagem de script interpretada pelo motor de renderização do
+        browser, largamente utilizada em aplicações web, mobile, desktop, games
+        geladeiras, micro-ondas, tamagotchis...</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="small">Mozilla</h2>
+    </hgroup>
+
+    <article class="flexbox hcenter vcenter">
+       <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+         <img src="images/mozilla.png" width="70%">
+       </a>
+     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="small">Airbnb (JSG)</h2>
+    </hgroup>
+
+    <article class="flexbox hcenter vcenter">
+       <a href="https://github.com/airbnb/javascript/" target="_blank">
+          <img src="images/airbnb.png" width="70%">
+       </a>
+     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="small">Por que aprender isso?</h2>
+    </hgroup>
+
+    <article><br><br>
+      <ul class="my-style">
+        <li>Extremamente fácil de aprender</li>
+        <li>Simples de usar</li>
+        <li>Multiplataforma</li>
+        <li>Não depende de compilador</li>
+        <li>Unity interpreta / compila Javascript (Unityscript)</li>
+        <li>Podemos fazer coisas incríveis apenas com eles</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide style="background:#9FCC6C">
+    <article class="flexbox hcenter vcenter">
+        <hgroup>
+          <h2 class="">Just Vanilla Games</h2><br><br>
+          <img src="images/vanilla.png" width="65%"><br><br>
+          <h2 class="small build">Oh wait!!!</h3>
+        </hgroup>
+     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="small">Tic Tac Toe</h2>
+    </hgroup>
+
+    <article class="flexbox hcenter vcenter">
+       <a href="http://0.0.0.0:5678/" target="_blank"><img src="images/tictactoe.png" width="65%"></a>
+     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="small">Snake</h2>
+    </hgroup>
+
+    <article class="flexbox hcenter vcenter">
+       <a href="http://0.0.0.0:8081/" target="_blank"><img src="images/snake.png" width="100%"></a>
+     </article>
+  </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Pacman</h2>
+      </hgroup>
+
+      <article class="flexbox hcenter vcenter">
+         <a href="http://0.0.0.0:8082/" target="_blank"><img src="images/pacman.png" width="95%"></a>
+       </article>
+    </slide>
+
+    <slide style="background:#9FCC6C">
+      <article class="flexbox hcenter vcenter">
+          <hgroup>
+            <h2 class="">Phaser.io</h2><br><br>
+            <img src="images/phaser.png" width="95%"><br><br>
+          </hgroup>
+       </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2>Phaser o que?</h2>
+      </hgroup>
+
+      <article class="hcenter"><br><br><br><br>
+          <p>"Phaser is a fun, free and fast 2D game framework for making HTML5
+          games for desktop and mobile web browsers, supporting Canvas and WebGL
+          rendering"</p>
+
+          <p class="hright">
+              <a href="http://phaser.io/">
+                  phaser.io
+              </a>
+          </p>
+      </article>
+    </slide>
+
+    <slide style="background:#FED07D;">
+      <hgroup>
+        <h2 class="small">LizBird for dummies</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+         <a href="http://0.0.0.0:8080/" target="_blank"><img src="images/lizBird.png" style="border:3px solid #fff" width="85%"></a>
+       </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Setup project</h2>
+      </hgroup>
+
+      <br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="HTML">
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+              &lt;head&gt;
+                  &lt;meta charset=&quot;utf-8&quot; /&gt;
+                  &lt;title&gt;LizBird&lt;/title&gt;
+              &lt;/head&gt;
+
+              &lt;body&gt;
+                  &lt;div id=&quot;stage&quot;&gt;&lt;/div&gt;
+
+                  &lt;script type=&quot;text/javascript&quot; src=&quot;phaser.min.js&quot;&gt;&lt;/script&gt;
+                  &lt;script type=&quot;text/javascript&quot; src=&quot;LizBird.js&quot;&gt;&lt;/script&gt;
+              &lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
+      </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="small">Phaser Sctructure</h2>
+    </hgroup>
+
+    <br><br><br>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+        var game = new Phaser.Game(400, 490, Phaser.AUTO, 'stage');
+
+        var GameView = {
+            preload: function() {},
+
+            create: function() {},
+
+            controls: function() {},
+
+            update: function() {}
+        }
+
+        game.state.add('main', GameView);
+        game.state.start('main');
+      </pre>
+    </article>
+  </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Initialize</h2>
+      </hgroup>
+
+      <br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+          var GameView = {
+              preload: function() {
+                // Define a cor de fundo do stage
+                game.stage.backgroundColor = '#71c5cf';
+
+                // Carrega a imagem
+                game.load.image('lizBird', 'assets/img/eliz.png');
+              }
+          }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Create / Show</h2>
+      </hgroup>
+
+      <br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+          var GameView = {
+              create: function() {
+                // Adiciona a lizBird ao stage
+                this.lizBird = this.game.add.sprite(100, 245, 'lizBird');
+              }
+          }
+        </pre>
+      </article>
+    </slide>
+
+    <slide style="background:#FED07D;">
+      <hgroup>
+        <h2 class="small">Our baby</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+         <a href="http://0.0.0.0:8080/" target="_blank"><img src="images/lizBird-1.png" style="border:3px solid #fff" width="85%"></a>
+       </article>
+    </slide>
+
+    <slide class="bgblack">
+      <hgroup>
+        <h2 class="small">Vamos calcular a força gravitacional?</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter" style="margin-top:0">
+         <img src="images/einstein.jpg" style="border:3px solid #fff" width="35%">
+       </article>
+    </slide>
+
+    <slide class="bgblack">
+      <article class="flexbox vcenter hcenter">
+         <hgroup>
+            <h2>Fg = G((M1 . M2)/r2)</h2>
+         </hgroup>
+       </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">I was just kidding :-D</h2>
+      </hgroup>
+
+      <br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+          var GameView = {
+              create: function() {
+                // Define o sistema de física
+                game.physics.startSystem(Phaser.Physics.ARCADE);
+
+                // Ativa o sistema de física ao objeto lizBird
+                game.physics.arcade.enable(this.lizBird);
+
+                // Seta a força gravitacional
+                this.lizBird.body.gravity.y = 1200;
+              }
+          }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Keyboard / Touch control</h2>
+      </hgroup>
+
+      <br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          controls: function() {
+              // Adiciona o controle a barra de espaço
+              var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
+              // Chama o método jump ao soltar a barra de espaço / toque
+              spaceKey.onDown.add(this.jump, this);
+
+              this.game.input.onDown.add(this.jump, this);
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide class="bgblack">
+      <hgroup>
+        <h2>Vamos pular?</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter" style="margin-top:0">
+       <img src="images/vamos-pular.jpg" style="border:3px solid #fff" width="55%">
+     </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Jump method</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          jump: function() {
+              // define a força gravitacional do pulo
+              this.lizBird.body.velocity.y = -400;
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide class="bgblack">
+      <hgroup>
+        <h2>É hora de matar!!!</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+       <img src="images/psycho.jpg" style="border:3px solid #fff" width="85%">
+     </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Time of death</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+        var GameView = {
+            update: function() {
+                // se a lizBird sair do stage, reinicia o game
+                if (this.lizBird.inWorld == false) {
+                    this.restartGame();
+                }
+            }
+        }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Restart game</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+        var GameView = {
+            restartGame: function() {
+                game.state.start('main');
+            }
+        }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Adding the Pipes</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          preload: function() {
+              // carrega o pipe
+              game.load.image('pipe', 'assets/img/pipe.png');
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Adding the Pipes</h2>
+      </hgroup>
+
+      <br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          create: function() {
+              // Cria um grupo de pipes
+              this.pipes = game.add.group();
+
+              // Adiciona física ao grupo
+              this.pipes.enableBody = true;
+
+              // Cria 20 pipes
+              this.pipes.createMultiple(20, 'pipe');
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Adding one pipe</h2>
+      </hgroup>
+
+      <br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          addOnePipe: function(x, y) {
+              // Pega o primeiro pipe morto do grupo
+              var pipe = this.pipes.getFirstDead();
+
+              // Defina a posição do pipe
+              pipe.reset(x, y);
+
+              // Adiciona velocidade para mover para esquerda
+              pipe.body.velocity.x = -220;
+
+              // Mata o pipe quando não estiver mais visível
+              pipe.checkWorldBounds = true;
+              pipe.outOfBoundsKill = true;
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Adding row of pipes</h2>
+      </hgroup>
+
+      <br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          addRowOfPipes: function() {
+              // Define onde a passagem estará
+              var hole = Math.floor(Math.random() * 5) + 1;
+
+              for (var i = 0; i < 8; i++) {
+                  if (i != hole && i != hole + 1) {
+                      this.addOnePipe(400, i * 60 + 10);
+                  }
+              }
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Adding row of pipes</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          create: function() {
+              // Chama a função addRowOfPipes a cada 1,5 segundos
+              this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide class="bgblack">
+      <hgroup>
+        <h2 class="small">Our baby with pipes :-P</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+       <img src="images/lizBird-2.png" style="border:3px solid #fff" width="85%">
+     </article>
+    </slide>
+
+    <slide class="bgblack">
+      <hgroup>
+        <h2>Collision</h2>
+      </hgroup>
+
+      <article class="flexbox vcenter hcenter">
+       <img src="images/collision.jpg" style="border:3px solid #fff" width="95%">
+     </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Adding a score</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+        var GameView = {
+          create: function() {
+              // Adiciona o score / contador de pontos
+              this.score = 0;
+              this.labelScore = game.add.text(20, 20, "0",
+              { font: "30px Arial", fill: "#ffffff" });
+          }
+        }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Increase the score</h2>
+      </hgroup>
+
+      <br><br><br><br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+      var GameView = {
+          addRowOfPipes: function() {
+              // Incrementa contador de pontos
+              this.score += 1;
+              this.labelScore.text = this.score;
+          }
+      }
+        </pre>
+      </article>
+    </slide>
+
+    <slide>
+      <hgroup>
+        <h2 class="small">Time of death again</h2>
+      </hgroup>
+
+      <br><br><br>
+      <article>
+        <pre class="prettyprint" data-lang="javascript">
+  var GameView = {
+      update: function() {
+          // Se colidir nos pipes, reinicia o game
+          game.physics.arcade.overlap
+          (
+            this.lizBird,
+            this.pipes,
+            this.restartGame,
+            null,
+            this
+          );
+      }
+  }
+        </pre>
+      </article>
+    </slide>
+
+  <slide class="bgblack">
+    <article>
+         <article class="flexbox vcenter hcenter">
+            <h2 class="">That's all folks!</h2><br><br>
+            <h2 class="small">github.com/zigolis</h2>
+            <h2 class="small">twitter.com/zigolis</h2>
+        </article>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
