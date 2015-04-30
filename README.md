@@ -1,4 +1,4 @@
-#Hello phaser.io, developing games with Javascript
+#Hello Phaser.io, developing games with Javascript
 
 Code of talk and game Hello phaser.io, developing games with javascript.
 
@@ -23,7 +23,7 @@ After that, enter the folder ```$ cd hello-phaser-io``` and execute this line in
 And then execute:
 
     sudo npm install http-server -g
-    
+
 You will have to inform your password
 
 ## Running
